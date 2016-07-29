@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "SPLogger.h"
-
+// or was hereeeeeeeeeee!!!
 /**
  * A data-structure which is used for configuring the system.
  */
@@ -22,6 +22,36 @@ typedef enum sp_config_msg_t {
 	SP_CONFIG_INDEX_OUT_OF_RANGE,
 	SP_CONFIG_SUCCESS
 } SP_CONFIG_MSG;
+
+/**
+ * represents the cut method when the kd-tree is build
+ */
+typedef enum KDSplitMethod {
+	RANDOM,
+	MAX_SPREAD,
+	INCREMENTAL
+} KDSplitMethod;
+
+/**
+ * struct which contains all configurations
+ */
+typedef struct sp_config_t
+{
+	char* 		  spImagesDirectory;
+	char* 		  spImagesPrefix;
+	char* 		  spImagesSuffix;
+	int 		  spNumOfImages;
+	int 	 	  spPCADimension;
+	char* 		  spPCAFilename;
+	int 		  spNumOfFeatures;
+	bool 		  spExtractionMode;
+	int 		  spNumOfSimilarImages;
+	KDSplitMethod spKDTreeSplitMethod;
+	int 		  spKNN;
+	bool 		  spMinimalGUI;
+	int 		  spLoggerLevel;
+	char* 		  spLoggerFilename;
+}sp_config_t;
 
 typedef struct sp_config_t* SPConfig;
 
