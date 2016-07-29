@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "SPLogger.h"
-
+// or was hereeeeeeeeeee!!!
 /**
  * A data-structure which is used for configuring the system.
  */
